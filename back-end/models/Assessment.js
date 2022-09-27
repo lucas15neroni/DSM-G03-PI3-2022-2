@@ -31,6 +31,11 @@ const schema = mongoose.Schema({
         type: Date,
         
     },
+    answers: [{
+        type: mongoose.ObjectId, // Tipo especial
+        ref: 'Answer', // Referencia a coleção Answer
+        required: false
+    }]
 })
 
 /*
